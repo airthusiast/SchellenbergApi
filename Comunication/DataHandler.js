@@ -241,6 +241,11 @@ class DataHandler extends EventEmitter {
         });
     }
 
+    getDeviceValue(inDeviceId) {
+
+        return this.dataStorage.deviceValueMap.get(inDeviceId).value;
+    }
+
     setDeviceValue(inDeviceId, inValue) {
 
         return new Promise((resolve, reject) => {
